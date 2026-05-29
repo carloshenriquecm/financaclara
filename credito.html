@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crédito | Finança Clara</title>
+  <meta name="description" content="Entenda parcelas, juros e quanto ainda falta pagar em empréstimos e financiamentos de forma simples." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="site-shell credit-page">
+    <section class="credit-hero-section" aria-label="Crédito e financiamentos">
+      <header class="site-header">
+        <a class="brand brand-logo-link" href="index.html" aria-label="Finança Clara">
+          <img class="site-logo site-logo-header" src="assets/img/branco.webp" alt="Finança Clara" />
+        </a>
+
+        <nav class="main-nav" aria-label="Menu principal">
+          <a href="index.html">Início</a>
+          <a class="active" href="credito.html">Crédito</a>
+          <a href="investimentos.html">Investimentos</a>
+          <a href="indices.html">Índices</a>
+          <a href="sobre.html">Sobre</a>
+        </nav>
+</header>
+
+      <div class="credit-hero-content">
+        <div class="credit-hero-copy">
+          <span class="hero-badge">Crédito</span>
+          <h1>Entenda sua dívida antes de tomar uma decisão.</h1>
+          <p>
+            Veja com clareza uma estimativa de quanto ainda falta pagar, quais juros estão embutidos e como uma parcela fixa evolui mês a mês.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#simulador-saldo">Ver quanto falta pagar</a>
+            <a class="btn btn-secondary" href="#simulador-price">Simular parcelas</a>
+          </div>
+        </div>
+
+        <div class="credit-hero-panel" aria-label="Resumo da página de crédito">
+          <article>
+            <span>01</span>
+            <strong>Informe o contrato</strong>
+            <small>Use os dados principais do empréstimo ou financiamento.</small>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Veja a estimativa</strong>
+            <small>O site mostra juros, parcelas pagas e valor que falta pagar.</small>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Simule uma parcela</strong>
+            <small>Compare uma dívida com parcela fixa mês a mês.</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="credit-overview-section" aria-label="Visão geral das ferramentas">
+      <div class="credit-section-heading">
+        <span class="section-eyebrow">Área de crédito</span>
+        <h2>Informações simples para entender melhor uma dívida</h2>
+        <p>Você não precisa montar fórmulas. Preencha os dados do contrato e acompanhe o resultado em linguagem direta.</p>
+      </div>
+
+      <div class="credit-overview-grid">
+        <article class="credit-overview-card">
+          <div class="credit-card-icon">R$</div>
+          <h3>Quanto ainda falta pagar</h3>
+          <p>Estime o saldo devedor a partir da parcela, prazo, valor original e datas do contrato.</p>
+        </article>
+        <article class="credit-overview-card">
+          <div class="credit-card-icon">%</div>
+          <h3>Juros aproximados</h3>
+          <p>Veja uma taxa mensal estimada com base nos dados informados.</p>
+        </article>
+        <article class="credit-overview-card">
+          <div class="credit-card-icon">📅</div>
+          <h3>Evolução mês a mês</h3>
+          <p>Acompanhe como a dívida diminui ao longo das parcelas em uma simulação com parcela fixa.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="credit-workspace-section" aria-label="Simuladores de crédito">
+      <div class="credit-workspace">
+        <aside class="credit-helper-card">
+          <span class="section-eyebrow">Como interpretar</span>
+          <h2>Use os resultados como uma estimativa para se orientar.</h2>
+          <p>
+            O cálculo ajuda a entender melhor o contrato, mas cada banco ou loja pode ter regras próprias.
+            Sempre confira a proposta oficial antes de fechar ou quitar uma dívida.
+          </p>
+          <ul>
+            <li><strong>Saldo devedor:</strong> valor aproximado que ainda falta pagar.</li>
+            <li><strong>Juros:</strong> estimativa mensal calculada pelos dados informados.</li>
+            <li><strong>Parcela fixa:</strong> simulação para entender a evolução da dívida ao longo do tempo.</li>
+          </ul>
+        </aside>
+
+        <div class="credit-forms-stack">
+          <section class="credit-form-card" id="simulador-saldo" aria-label="Calculadora de saldo devedor">
+            <div class="credit-form-header">
+              <span>Simulador 01</span>
+              <h2>Quanto ainda falta pagar?</h2>
+              <p>Preencha os dados principais do contrato. Quando houver informação suficiente, o resultado aparece sozinho.</p>
+            </div>
+
+            <div class="form-grid two-columns">
+              <label>
+                <span>Total de parcelas do contrato</span>
+                <small class="field-hint">Quantidade total combinada no início.</small>
+                <input type="number" id="numParcelas" min="1" step="1" inputmode="numeric" placeholder="Ex.: 36" required />
+              </label>
+              <label>
+                <span>Valor de cada parcela</span>
+                <small class="field-hint">Use o valor mensal que aparece no contrato.</small>
+                <input type="number" id="valorParcela" min="0" step="0.01" inputmode="decimal" placeholder="Ex.: 524,18" required />
+              </label>
+              <label>
+                <span>Valor original do crédito</span>
+                <small class="field-hint">Valor financiado ou emprestado no início.</small>
+                <input type="number" id="valorTotal" min="0" step="0.01" inputmode="decimal" placeholder="Ex.: 12000,00" required />
+              </label>
+              <label>
+                <span>Data da primeira parcela</span>
+                <small class="field-hint">Primeiro vencimento do contrato.</small>
+                <input type="date" id="dataEmprestimo" required />
+              </label>
+              <label>
+                <span>Quero saber a situação em</span>
+                <small class="field-hint">Normalmente, use a data de hoje.</small>
+                <input type="date" id="dataConsulta" required />
+              </label>
+            </div>
+
+            <div class="credit-simple-guidance">
+              <span class="credit-simple-icon" aria-hidden="true">✓</span>
+              <div>
+                <strong>O resultado atualiza sozinho.</strong>
+                <span>Altere qualquer campo e a estimativa muda automaticamente.</span>
+              </div>
+            </div>
+
+            <div class="credit-result-grid" aria-label="Resultados do saldo devedor">
+              <p id="resultado1" class="credit-result-card"></p>
+              <p id="resultado2" class="credit-result-card"></p>
+              <p id="resultado3" class="credit-result-card featured"></p>
+            </div>
+          </section>
+
+          <section class="credit-form-card" id="simulador-price" aria-label="Simulador de financiamento com parcela fixa">
+            <div class="credit-form-header">
+              <span>Simulador 02</span>
+              <h2>Simular parcelas fixas</h2>
+              <p>Use esta área para entender como uma dívida com parcela fixa pode evoluir mês a mês.</p>
+            </div>
+
+            <div class="form-grid two-columns">
+              <label>
+                <span>Valor que deseja financiar</span>
+                <small class="field-hint">Pode ser o saldo devedor calculado acima ou outro valor.</small>
+                <input type="number" id="loanAmount" min="0" step="0.01" inputmode="decimal" placeholder="Ex.: 10000,00" />
+              </label>
+              <label>
+                <span>Em quantas parcelas?</span>
+                <small class="field-hint">Quantidade de meses da simulação.</small>
+                <input type="number" id="numberOfInstallments" min="1" step="1" inputmode="numeric" placeholder="Ex.: 24" />
+              </label>
+              <label>
+                <span>Juros ao mês (%)</span>
+                <small class="field-hint">Se você calculou o saldo acima, use a taxa estimada mostrada lá.</small>
+                <input type="number" id="interestRate" min="0" step="0.01" inputmode="decimal" placeholder="Ex.: 2,5" />
+              </label>
+            </div>
+
+            <div class="credit-simple-guidance">
+              <span class="credit-simple-icon" aria-hidden="true">↻</span>
+              <div>
+                <strong>A simulação também atualiza sozinha.</strong>
+                <span>Se preferir, você pode usar o saldo calculado acima como valor desta simulação.</span>
+              </div>
+            </div>
+
+            <div class="credit-actions-row credit-actions-row-simplified">
+              <button type="button" class="credit-secondary-action" onclick="preencherSaldoDevedor()">Usar valor que falta pagar</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="credit-table-wrap" id="resultado-financiamento">
+        <div class="credit-table-heading">
+          <span class="section-eyebrow">Resultado da simulação</span>
+          <h2>Evolução do financiamento</h2>
+          <p>Quando os campos estiverem completos, o resumo e a tabela aparecem aqui para mostrar parcela, juros e saldo mês a mês.</p>
+        </div>
+        <div id="result" class="resultado credit-table-result"></div>
+      </div>
+    </section>
+
+    <section class="final-cta-section investment-next-section" aria-label="Aviso sobre estimativas de crédito">
+      <div class="final-cta-card">
+        <span class="final-cta-badge">Importante</span>
+        <h2>Confira sempre as condições reais do contrato.</h2>
+        <p>
+          As simulações ajudam a entender cenários, mas não substituem contrato, boleto, proposta de banco, loja, financeira ou orientação profissional.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer" aria-label="Rodapé">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo footer-logo-image" href="index.html" aria-label="Finança Clara">
+            <img class="site-logo footer-logo-img" src="assets/img/roxo.webp" alt="Finança Clara" />
+          </a>
+          <p>Simulações financeiras claras para crédito, investimentos e correção por índices.</p>
+        </div>
+
+        <nav class="footer-column" aria-label="Ferramentas">
+          <strong>Ferramentas</strong>
+          <a href="credito.html">Crédito</a>
+          <a href="investimentos.html">Investimentos</a>
+          <a href="indices.html">Índices</a>
+          <a href="sobre.html">Sobre</a>
+        </nav>
+
+        <nav class="footer-column" aria-label="Crédito">
+          <strong>Crédito</strong>
+          <a href="#simulador-saldo">Quanto falta pagar</a>
+          <a href="#simulador-price">Parcelas fixas</a>
+          <a href="#resultado-financiamento">Evolução mensal</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Site Portfólio – Criado exclusivamente para estudos e busca de oportunidades profissionais.</span>
+        <div class="footer-social" aria-label="Links sociais ilustrativos">
+          <span aria-hidden="true">in</span>
+          <span aria-hidden="true">x</span>
+          <span aria-hidden="true">@</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

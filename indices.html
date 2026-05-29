@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Índices | Finança Clara</title>
+  <meta name="description" content="Acompanhe Selic, CDI, IPCA, TR e poupança usados nas simulações financeiras do Finança Clara." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="credit-page indices-page">
+  <main class="site-shell">
+    <section class="credit-hero-section indices-hero-section" aria-label="Página de índices financeiros">
+      <header class="site-header">
+        <a class="brand brand-logo-link" href="index.html" aria-label="Finança Clara">
+          <img class="site-logo site-logo-header" src="assets/img/branco.webp" alt="Finança Clara" />
+        </a>
+
+        <nav class="main-nav" aria-label="Menu principal">
+          <a href="index.html">Início</a>
+          <a href="credito.html">Crédito</a>
+          <a href="investimentos.html">Investimentos</a>
+          <a class="active" href="indices.html">Índices</a>
+          <a href="sobre.html">Sobre</a>
+        </nav>
+</header>
+
+      <div class="credit-hero-content">
+        <div class="credit-hero-copy">
+          <span class="hero-badge">Índices financeiros</span>
+          <h1>Indicadores atualizados para suas simulações.</h1>
+          <p>
+            Acompanhe com o Finança Clara as principais taxas do mercado, de forma prática e fácil.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#indices-painel">Ver indicadores</a>
+            <a class="btn btn-secondary" href="#uso-indices">Entender os usos</a>
+          </div>
+        </div>
+
+        <div class="credit-hero-panel indices-hero-panel" aria-label="Resumo da página de índices">
+          <article>
+            <span>01</span>
+            <strong>Atualiza ao abrir</strong>
+            <small>A página busca novas informações automaticamente.</small>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Sem preenchimento manual</strong>
+            <small>Os indicadores são exibidos como referência de mercado.</small>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Uso nas simulações</strong>
+            <small>Investimentos pode aproveitar os valores salvos.</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="indices-live-section" id="indices-painel" aria-label="Indicadores financeiros atualizados">
+      <div class="credit-section-heading indices-live-heading">
+        <span class="section-eyebrow">Central de índices</span>
+        <h2>Valores de referência</h2>
+        <p>Esses números acompanham fontes públicas e servem como apoio para simulações. Eles podem mudar com o tempo e não representam recomendação de investimento.</p>
+      </div>
+
+      <div class="indices-rate-grid">
+        <article class="indices-rate-card" id="indexCardSelic">
+          <span class="indices-rate-kicker">Taxa básica de juros</span>
+          <h3>Selic</h3>
+          <strong id="indexSelicAnnualValue">--</strong>
+          <small>ao ano</small>
+          <p>Ajuda a entender o patamar geral dos juros no Brasil.</p>
+          <em id="indexSelicAnnualMeta">Aguardando atualização.</em>
+        </article>
+
+        <article class="indices-rate-card" id="indexCardCdi">
+          <span class="indices-rate-kicker">Referência da renda fixa</span>
+          <h3>CDI</h3>
+          <strong id="indexCdiAnnualValue">--</strong>
+          <small>ao ano</small>
+          <p>Usado para comparar CDB, LCI/LCA e aplicações atreladas ao CDI.</p>
+          <em id="indexCdiAnnualMeta">Aguardando atualização.</em>
+        </article>
+
+        <article class="indices-rate-card" id="indexCardIpca">
+          <span class="indices-rate-kicker">Inflação</span>
+          <h3>IPCA</h3>
+          <strong id="indexIpcaAnnualValue">--</strong>
+          <small>ao ano</small>
+          <p>Mostra a alta de preços usada para comparar ganho real.</p>
+          <em id="indexIpcaAnnualMeta">Aguardando atualização.</em>
+        </article>
+
+        <article class="indices-rate-card" id="indexCardTr">
+          <span class="indices-rate-kicker">Referência mensal</span>
+          <h3>TR</h3>
+          <strong id="indexTrMonthlyValue">--</strong>
+          <small>ao mês</small>
+          <p>Entra em algumas regras de poupança e contratos financeiros.</p>
+          <em id="indexTrMonthlyMeta">Aguardando atualização.</em>
+        </article>
+
+        <article class="indices-rate-card" id="indexCardSavings">
+          <span class="indices-rate-kicker">Estimativa mensal</span>
+          <h3>Poupança</h3>
+          <strong id="indexSavingsMonthlyValue">--</strong>
+          <small>ao mês</small>
+          <p>Usada como comparação simples na página de Investimentos.</p>
+          <em id="indexSavingsMonthlyMeta">Calculada a partir das regras da poupança.</em>
+        </article>
+
+        <article class="indices-rate-card" id="indexCardInflation">
+          <span class="indices-rate-kicker">Referência de compra</span>
+          <h3>Inflação acumulada</h3>
+          <strong id="indexInflationAccumulatedValue">--</strong>
+          <small>referência anual</small>
+          <p>Ajuda a observar se uma aplicação superou a inflação.</p>
+          <em id="indexInflationAccumulatedMeta">Acompanhando o IPCA disponível.</em>
+        </article>
+      </div>
+    </section>
+
+    <section class="credit-workspace-section indices-workspace-section" aria-label="Como os índices são usados">
+      <div class="credit-workspace indices-workspace">
+        <aside class="credit-helper-card indices-helper-card" id="uso-indices">
+          <span class="section-eyebrow">Como ler</span>
+          <h2>Os índices são referências, não uma promessa de resultado.</h2>
+          <p>
+            Eles ajudam o site a criar simulações mais próximas do cenário atual. Mesmo assim, bancos, corretoras e produtos financeiros podem usar regras próprias.
+          </p>
+          <ul>
+            <li><strong>CDI:</strong> compara aplicações como CDB e LCI/LCA.</li>
+            <li><strong>IPCA:</strong> mostra o efeito da inflação no poder de compra.</li>
+            <li><strong>Selic e TR:</strong> ajudam em cenários de juros, poupança e correções.</li>
+          </ul>
+        </aside>
+
+        <div class="credit-forms-stack indices-forms-stack">
+          <section class="credit-form-card indices-form-card indices-readable-card" aria-label="Uso dos indicadores nas simulações">
+            <div class="credit-form-header">
+              <span>Uso prático</span>
+              <h2>Onde esses valores entram?</h2>
+              <p>Você não precisa decorar os índices. O site usa essas referências para facilitar comparações e preencher parâmetros quando possível.</p>
+            </div>
+
+            <div class="indices-use-list">
+              <article>
+                <strong>Na página Investimentos</strong>
+                <p>Os valores podem preencher CDI, Selic, IPCA e TR para comparar CDB, LCI/LCA, poupança e correção pela inflação.</p>
+              </article>
+              <article>
+                <strong>Na comparação com a inflação</strong>
+                <p>O IPCA ajuda a enxergar se o dinheiro realmente ganhou poder de compra ou apenas acompanhou os preços.</p>
+              </article>
+              <article>
+                <strong>Quando não houver conexão</strong>
+                <p>Se a atualização não funcionar no momento, o site mostra a última consulta salva neste navegador ou avisa que os dados estão indisponíveis.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section indices-next-section" aria-label="Aviso sobre estimativas">
+      <div class="final-cta-card">
+        <span class="final-cta-badge">Importante</span>
+        <h2>Use os índices como apoio para decidir melhor.</h2>
+        <p>
+          As simulações do Finança Clara são educativas. Elas ajudam a comparar cenários, mas não substituem contrato, proposta de banco, orientação profissional ou leitura das condições reais do produto financeiro.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer" aria-label="Rodapé">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo footer-logo-image" href="index.html" aria-label="Finança Clara">
+            <img class="site-logo footer-logo-img" src="assets/img/roxo.webp" alt="Finança Clara" />
+          </a>
+          <p>Simulações financeiras claras para crédito, investimentos e correção por índices.</p>
+        </div>
+
+        <nav class="footer-column" aria-label="Ferramentas">
+          <strong>Ferramentas</strong>
+          <a href="credito.html">Crédito</a>
+          <a href="investimentos.html">Investimentos</a>
+          <a href="indices.html">Índices</a>
+          <a href="sobre.html">Sobre</a>
+        </nav>
+
+        <nav class="footer-column" aria-label="Índices">
+          <strong>Índices</strong>
+          <a href="#indices-painel">Valores de referência</a>
+          <a href="#uso-indices">Como são usados</a>
+          <a href="investimentos.html">Usar em investimentos</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Site Portfólio – Criado exclusivamente para estudos e busca de oportunidades profissionais.</span>
+        <div class="footer-social" aria-label="Links sociais ilustrativos">
+          <span aria-hidden="true">in</span>
+          <span aria-hidden="true">x</span>
+          <span aria-hidden="true">@</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
